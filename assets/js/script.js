@@ -8,7 +8,7 @@ function FetchApi() {
     fetch('https://gpoint.onrender.com/apprenant')
         .then(response => response.json())
         .then((data) => {
-
+            console.log(data);
 
             data.map((elm, index) => {
                 let count = (elm.id = index + 1);
@@ -43,7 +43,7 @@ function FetchApi() {
     
                         // console.log(key);
                         if (confirm('voulez vous supprimez cette apprenant ?')) {
-                            fetch('http://localhost:5000/apprenant/' + key, {
+                            fetch('https://gpoint.onrender.com/apprenant' + key, {
                                 method: 'delete',
 
                             })

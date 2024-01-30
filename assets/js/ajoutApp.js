@@ -13,7 +13,7 @@ async function ajoutApp(e) {
     e.preventDefault()
     if(nom.value !== "" && ref.value !== "" && ident.value !== '' && ref.value !== '' ){
 
-        fetch('http://localhost:5000/apprenant',{
+        fetch('https://gpoint.onrender.com/apprenant',{
             method:"post",
             headers:{'content-type':'application/json'},
             body: JSON.stringify({
@@ -26,7 +26,7 @@ async function ajoutApp(e) {
         .then(res => alert(res))
 
         nom.value='';
-        ref.value ='';
+        pnom.value ='';
         ident.value = ''; 
         ref.value ='';
 
